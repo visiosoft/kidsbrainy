@@ -4,7 +4,7 @@ import '../widgets/alphabet_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AlphabetScreen extends StatefulWidget {
-  const AlphabetScreen({Key? key}) : super(key: key);
+  const AlphabetScreen({super.key});
 
   @override
   _AlphabetScreenState createState() => _AlphabetScreenState();

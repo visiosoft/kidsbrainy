@@ -4,7 +4,7 @@ import '../widgets/body_part_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BodyPartScreen extends StatefulWidget {
-  const BodyPartScreen({Key? key}) : super(key: key);
+  const BodyPartScreen({super.key});
 
   @override
   _BodyPartScreenState createState() => _BodyPartScreenState();

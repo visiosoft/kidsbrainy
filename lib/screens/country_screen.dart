@@ -4,7 +4,7 @@ import '../widgets/country_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CountryScreen extends StatefulWidget {
-  const CountryScreen({Key? key}) : super(key: key);
+  const CountryScreen({super.key});
 
   @override
   _CountryScreenState createState() => _CountryScreenState();

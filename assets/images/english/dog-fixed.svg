@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="800px" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dog body -->
+  <ellipse cx="400" cy="450" rx="250" ry="200" fill="#D2B48C" stroke="#8B4513" stroke-width="5"/>
+  
+  <!-- Head -->
+  <circle cx="250" cy="300" r="120" fill="#D2B48C" stroke="#8B4513" stroke-width="5"/>
+  
+  <!-- Ears -->
+  <path d="M180 220 Q 130 150 100 220" fill="#A0522D" stroke="#8B4513" stroke-width="5"/>
+  <path d="M320 220 Q 370 150 400 220" fill="#A0522D" stroke="#8B4513" stroke-width="5"/>
+  
+  <!-- Eyes -->
+  <circle cx="210" cy="280" r="15" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+  <circle cx="290" cy="280" r="15" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+  <circle cx="210" cy="280" r="7" fill="#000000"/>
+  <circle cx="290" cy="280" r="7" fill="#000000"/>
+  
+  <!-- Nose -->
+  <ellipse cx="250" cy="320" rx="25" ry="15" fill="#000000"/>
+  
+  <!-- Mouth -->
+  <path d="M250 340 Q 250 370 200 360" fill="none" stroke="#000000" stroke-width="3"/>
+  <path d="M250 340 Q 250 370 300 360" fill="none" stroke="#000000" stroke-width="3"/>
+  
+  <!-- Tail -->
+  <path d="M650 450 Q 700 350 750 450" fill="#D2B48C" stroke="#8B4513" stroke-width="5"/>
+  
+  <!-- Legs -->
+  <rect x="300" y="600" width="40" height="100" fill="#D2B48C" stroke="#8B4513" stroke-width="5" rx="15" ry="15"/>
+  <rect x="460" y="600" width="40" height="100" fill="#D2B48C" stroke="#8B4513" stroke-width="5" rx="15" ry="15"/>
+  <rect x="350" y="620" width="40" height="100" fill="#D2B48C" stroke="#8B4513" stroke-width="5" rx="15" ry="15"/>
+  <rect x="510" y="620" width="40" height="100" fill="#D2B48C" stroke="#8B4513" stroke-width="5" rx="15" ry="15"/>
+  
+  <!-- Spots -->
+  <ellipse cx="450" cy="400" rx="50" ry="40" fill="#8B4513"/>
+  <ellipse cx="350" cy="500" rx="40" ry="30" fill="#8B4513"/>
+  <ellipse cx="500" cy="500" rx="35" ry="25" fill="#8B4513"/>
+</svg> 

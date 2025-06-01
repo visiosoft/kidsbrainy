@@ -4,7 +4,7 @@ import '../widgets/number_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NumberScreen extends StatefulWidget {
-  const NumberScreen({Key? key}) : super(key: key);
+  const NumberScreen({super.key});
 
   @override
   _NumberScreenState createState() => _NumberScreenState();

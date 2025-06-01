@@ -4,7 +4,7 @@ import '../widgets/color_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ColorScreen extends StatefulWidget {
-  const ColorScreen({Key? key}) : super(key: key);
+  const ColorScreen({super.key});
 
   @override
   _ColorScreenState createState() => _ColorScreenState();

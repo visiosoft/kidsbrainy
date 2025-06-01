@@ -3,8 +3,8 @@ import '../models/body_part_item.dart';
 final List<BodyPartItem> bodyPartData = [
   BodyPartItem(
     name: 'Heart',
-    image: 'assets/images/body_heart.png',
-    sound: 'assets/sounds/body_heart.mp3',
+    image: 'assets/images/body-parts/heart.png',
+    sound: 'assets/audios/body-parts/heart.mp3',
     system: 'Circulatory System',
     description: 'The heart is a muscular organ that pumps blood throughout the body.',
     functions: [
@@ -16,8 +16,8 @@ final List<BodyPartItem> bodyPartData = [
   ),
   BodyPartItem(
     name: 'Brain',
-    image: 'assets/images/body_brain.png',
-    sound: 'assets/sounds/body_brain.mp3',
+    image: 'assets/images/body-parts/brain.png',
+    sound: 'assets/audios/body-parts/brain.mp3',
     system: 'Nervous System',
     description: 'The brain is the control center of the body, responsible for thinking, feeling, and controlling body functions.',
     functions: [
@@ -29,8 +29,8 @@ final List<BodyPartItem> bodyPartData = [
   ),
   BodyPartItem(
     name: 'Lungs',
-    image: 'assets/images/body_lungs.png',
-    sound: 'assets/sounds/body_lungs.mp3',
+    image: 'assets/images/body-parts/lungs.png',
+    sound: 'assets/audios/body-parts/lungs.mp3',
     system: 'Respiratory System',
     description: 'The lungs are the main organs of breathing, helping us take in oxygen and remove carbon dioxide.',
     functions: [
@@ -42,8 +42,8 @@ final List<BodyPartItem> bodyPartData = [
   ),
   BodyPartItem(
     name: 'Stomach',
-    image: 'assets/images/body_stomach.png',
-    sound: 'assets/sounds/body_stomach.mp3',
+    image: 'assets/images/body-parts/stomach.png',
+    sound: 'assets/audios/body-parts/stomach.mp3',
     system: 'Digestive System',
     description: 'The stomach is a muscular organ that helps break down food for digestion.',
     functions: [
@@ -54,9 +54,9 @@ final List<BodyPartItem> bodyPartData = [
     ],
   ),
   BodyPartItem(
-    name: 'Bones',
-    image: 'assets/images/body_bones.png',
-    sound: 'assets/sounds/body_bones.mp3',
+    name: 'Skeleton',
+    image: 'assets/images/body-parts/skeleton.png',
+    sound: 'assets/audios/body-parts/skeleton.mp3',
     system: 'Skeletal System',
     description: 'Bones provide structure, protect organs, and help us move.',
     functions: [
@@ -68,8 +68,8 @@ final List<BodyPartItem> bodyPartData = [
   ),
   BodyPartItem(
     name: 'Eyes',
-    image: 'assets/images/body_eyes.png',
-    sound: 'assets/sounds/body_eyes.mp3',
+    image: 'assets/images/body-parts/eyes.png',
+    sound: 'assets/audios/body-parts/eyes.mp3',
     system: 'Sensory System',
     description: 'The eyes are our organs of vision, allowing us to see the world around us.',
     functions: [
@@ -81,8 +81,8 @@ final List<BodyPartItem> bodyPartData = [
   ),
   BodyPartItem(
     name: 'Ears',
-    image: 'assets/images/body_ears.png',
-    sound: 'assets/sounds/body_ears.mp3',
+    image: 'assets/images/body-parts/ear.png',
+    sound: 'assets/audios/body-parts/ears.mp3',
     system: 'Sensory System',
     description: 'The ears help us hear sounds and maintain balance.',
     functions: [
@@ -94,8 +94,8 @@ final List<BodyPartItem> bodyPartData = [
   ),
   BodyPartItem(
     name: 'Liver',
-    image: 'assets/images/body_liver.png',
-    sound: 'assets/sounds/body_liver.mp3',
+    image: 'assets/images/body-parts/liver.png',
+    sound: 'assets/audios/body-parts/liver.mp3',
     system: 'Digestive System',
     description: 'The liver is the body\'s largest internal organ and performs many vital functions.',
     functions: [
@@ -107,8 +107,8 @@ final List<BodyPartItem> bodyPartData = [
   ),
   BodyPartItem(
     name: 'Kidneys',
-    image: 'assets/images/body_kidneys.png',
-    sound: 'assets/sounds/body_kidneys.mp3',
+    image: 'assets/images/body-parts/kidney.png',
+    sound: 'assets/audios/body-parts/kidneys.mp3',
     system: 'Urinary System',
     description: 'The kidneys filter waste from blood and help maintain water balance.',
     functions: [
@@ -120,8 +120,8 @@ final List<BodyPartItem> bodyPartData = [
   ),
   BodyPartItem(
     name: 'Skin',
-    image: 'assets/images/body_skin.png',
-    sound: 'assets/sounds/body_skin.mp3',
+    image: 'assets/images/body-parts/skin.jpg',
+    sound: 'assets/audios/body-parts/skin.mp3',
     system: 'Integumentary System',
     description: 'The skin is the body\'s largest organ and protects us from the environment.',
     functions: [

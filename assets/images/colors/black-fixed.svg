@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple black SVG -->
+  <rect width="300" height="300" fill="#f0f0f0" rx="15" ry="15"/>
+  
+  <!-- Black circle -->
+  <circle cx="150" cy="150" r="100" fill="#000000"/>
+  
+  <!-- Black objects -->
+  <rect x="40" y="40" width="50" height="50" rx="5" fill="#000000"/>
+  <rect x="210" y="40" width="50" height="50" rx="5" fill="#000000"/>
+  <rect x="40" y="210" width="50" height="50" rx="5" fill="#000000"/>
+  <rect x="210" y="210" width="50" height="50" rx="5" fill="#000000"/>
+</svg> 

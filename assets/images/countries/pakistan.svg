@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="600" viewBox="-75 -40 120 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <rect x="-75" y="-40" width="120" height="80" fill="#fff"/>
+ <rect x="-45" y="-40" width="90" height="80" fill="#060"/>
+ <circle r="24" fill="#fff"/>
+ <circle transform="rotate(-41.634 45 -40)" cx="-7" cy="-40" r="22" fill="#060"/>
+ <comment>rotation angles = -arctan(8/9)</comment>
+ <g transform="rotate(-41.634) translate(16)" fill="#fff">
+  <g id="a">
+   <polygon id="b" transform="translate(8) rotate(18)" points="0 0 -8 0 -8 4"/>
+   <use transform="scale(1,-1)" xlink:href="#b"/>
+  </g>
+  <use transform="rotate(72)" xlink:href="#a"/>
+  <use transform="rotate(-72)" xlink:href="#a"/>
+  <use transform="rotate(144)" xlink:href="#a"/>
+  <use transform="rotate(216)" xlink:href="#a"/>
+ </g>
+</svg>

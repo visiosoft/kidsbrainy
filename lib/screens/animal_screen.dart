@@ -4,7 +4,7 @@ import '../widgets/animal_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AnimalScreen extends StatefulWidget {
-  const AnimalScreen({Key? key}) : super(key: key);
+  const AnimalScreen({super.key});
 
   @override
   _AnimalScreenState createState() => _AnimalScreenState();

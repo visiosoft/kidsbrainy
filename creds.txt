@@ -1,0 +1,2 @@
+keystore password = kidsLearningkey1001
+key alias = upload

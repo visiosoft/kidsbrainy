@@ -3,8 +3,8 @@ import '../models/animal_item.dart';
 final List<AnimalItem> animalData = [
   AnimalItem(
     name: 'Lion',
-    image: 'assets/images/animal_lion.png',
-    sound: 'assets/sounds/animal_lion.mp3',
+    image: 'assets/images/animals/lion-153897.svg',
+    sound: 'assets/audios/animals/lion.mp3',
     category: 'Wild Animals',
     facts: [
       'Lions are the second largest big cat species in the world',
@@ -14,8 +14,8 @@ final List<AnimalItem> animalData = [
   ),
   AnimalItem(
     name: 'Elephant',
-    image: 'assets/images/animal_elephant.png',
-    sound: 'assets/sounds/animal_elephant.mp3',
+    image: 'assets/images/animals/elephant-1217313.svg',
+    sound: 'assets/audios/animals/elephant.mp3',
     category: 'Wild Animals',
     facts: [
       'Elephants are the largest land animals on Earth',
@@ -25,8 +25,8 @@ final List<AnimalItem> animalData = [
   ),
   AnimalItem(
     name: 'Giraffe',
-    image: 'assets/images/animal_giraffe.png',
-    sound: 'assets/sounds/animal_giraffe.mp3',
+    image: 'assets/images/animals/giraffe-1232939.svg',
+    sound: 'assets/audios/animals/giraffe.mp3',
     category: 'Wild Animals',
     facts: [
       'Giraffes are the tallest mammals on Earth',
@@ -36,8 +36,8 @@ final List<AnimalItem> animalData = [
   ),
   AnimalItem(
     name: 'Dog',
-    image: 'assets/images/animal_dog.png',
-    sound: 'assets/sounds/animal_dog.mp3',
+    image: 'assets/images/animals/dog-fixed.svg',
+    sound: 'assets/audios/animals/dog.mp3',
     category: 'Pets',
     facts: [
       'Dogs have a sense of smell that is up to 100,000 times better than humans',
@@ -47,8 +47,8 @@ final List<AnimalItem> animalData = [
   ),
   AnimalItem(
     name: 'Cat',
-    image: 'assets/images/animal_cat.png',
-    sound: 'assets/sounds/animal_cat.mp3',
+    image: 'assets/images/animals/cat.svg',
+    sound: 'assets/audios/animals/cat.mp3',
     category: 'Pets',
     facts: [
       'Cats spend 70% of their lives sleeping',
@@ -58,8 +58,8 @@ final List<AnimalItem> animalData = [
   ),
   AnimalItem(
     name: 'Fish',
-    image: 'assets/images/animal_fish.png',
-    sound: 'assets/sounds/animal_fish.mp3',
+    image: 'assets/images/animals/fish-1331816.svg',
+    sound: 'assets/audios/animals/fish.mp3',
     category: 'Aquatic Animals',
     facts: [
       'There are more than 32,000 different species of fish',
@@ -69,8 +69,8 @@ final List<AnimalItem> animalData = [
   ),
   AnimalItem(
     name: 'Bird',
-    image: 'assets/images/animal_bird.png',
-    sound: 'assets/sounds/animal_bird.mp3',
+    image: 'assets/images/animals/bird-34663.svg',
+    sound: 'assets/audios/animals/bird.mp3',
     category: 'Pets',
     facts: [
       'There are around 10,000 different species of birds',
@@ -80,8 +80,8 @@ final List<AnimalItem> animalData = [
   ),
   AnimalItem(
     name: 'Monkey',
-    image: 'assets/images/animal_monkey.png',
-    sound: 'assets/sounds/animal_monkey.mp3',
+    image: 'assets/images/animals/monkey-310301.svg',
+    sound: 'assets/audios/animals/monkey.mp3',
     category: 'Wild Animals',
     facts: [
       'Monkeys are very intelligent animals',
@@ -91,8 +91,8 @@ final List<AnimalItem> animalData = [
   ),
   AnimalItem(
     name: 'Frog',
-    image: 'assets/images/animal_frog.png',
-    sound: 'assets/sounds/animal_frog.mp3',
+    image: 'assets/images/animals/frog.svg',
+    sound: 'assets/audios/animals/frog.mp3',
     category: 'Amphibians',
     facts: [
       'Frogs can lay up to 4,000 eggs at one time',
@@ -102,13 +102,13 @@ final List<AnimalItem> animalData = [
   ),
   AnimalItem(
     name: 'Turtle',
-    image: 'assets/images/animal_turtle.png',
-    sound: 'assets/sounds/animal_turtle.mp3',
+    image: 'assets/images/animals/animal-47047.svg',
+    sound: 'assets/audios/animals/turtle.mp3',
     category: 'Reptiles',
     facts: [
-      'Turtles have existed for around 215 million years',
-      'Some turtles can live for more than 100 years',
-      'A turtle\'s shell is made up of about 60 different bones',
+      'Turtles can live for a very long time.',
+      'Turtles have a hard shell to protect them.',
+      'Some turtles can hide their heads inside their shells.'
     ],
   ),
 ]; 

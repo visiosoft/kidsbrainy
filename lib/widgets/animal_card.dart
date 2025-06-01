@@ -2,16 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import '../models/animal_item.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-class AnimalCard extends StatelessWidget {
+class AnimalCard extends StatefulWidget {
   final AnimalItem item;
-  final AudioPlayer audioPlayer = AudioPlayer();
 
-  AnimalCard({Key? key, required this.item}) : super(key: key);
+  const AnimalCard({Key? key, required this.item}) : super(key: key);
+
+  @override
+  State<AnimalCard> createState() => _AnimalCardState();
+}
+
+class _AnimalCardState extends State<AnimalCard> {
+  AudioPlayer? audioPlayer;
+
+  @override
+  void dispose() {
+    audioPlayer?.dispose();
+    super.dispose();
+  }
 
   void _playSound() async {
     try {
-      await audioPlayer.play(AssetSource(item.sound.replaceFirst('assets/', '')));
+      // Release any existing player
+      await audioPlayer?.dispose();
+      
+      // Create a new instance for each playback
+      audioPlayer = AudioPlayer();
+      
+      // Remove 'assets/' prefix as AssetSource adds it automatically
+      final soundPath = widget.item.sound.replaceFirst('assets/', '');
+      
+      // Play the sound
+      await audioPlayer?.play(AssetSource(soundPath));
     } catch (e) {
       debugPrint('Error playing sound: $e');
     }
@@ -48,15 +71,15 @@ class AnimalCard extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          item.name,
+                          widget.item.name,
                           style: GoogleFonts.comfortaa(
-                            fontSize: 32,
+                            fontSize: 28,
                             fontWeight: FontWeight.bold,
                             color: Colors.pink.shade800,
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 4),
+                        const SizedBox(height: 2),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                           decoration: BoxDecoration(
@@ -64,7 +87,7 @@ class AnimalCard extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Text(
-                            item.category,
+                            widget.item.category,
                             style: GoogleFonts.comfortaa(
                               fontSize: 14,
                               color: Colors.pink.shade700,
@@ -79,9 +102,9 @@ class AnimalCard extends StatelessWidget {
               const SizedBox(height: 16),
               // Animal image
               Expanded(
-                flex: 3,
+                flex: 5,
                 child: Container(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(8.0),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(16),
@@ -93,20 +116,30 @@ class AnimalCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: Image.asset(
-                    item.image,
-                    fit: BoxFit.contain,
-                    errorBuilder: (context, error, stackTrace) {
-                      return const Icon(Icons.image_not_supported, size: 64);
-                    },
-                  ),
+                  child: widget.item.image.toLowerCase().endsWith('.svg')
+                    ? SvgPicture.asset(
+                        widget.item.image,
+                        fit: BoxFit.contain,
+                        width: double.infinity,
+                        height: double.infinity,
+                        placeholderBuilder: (context) => const Center(
+                          child: CircularProgressIndicator(),
+                        ),
+                      )
+                    : Image.asset(
+                        widget.item.image,
+                        fit: BoxFit.contain,
+                        errorBuilder: (context, error, stackTrace) {
+                          return const Icon(Icons.image_not_supported, size: 64);
+                        },
+                      ),
                 ),
               ),
               const SizedBox(height: 16),
               // Animal facts
               Container(
                 width: double.infinity,
-                padding: const EdgeInsets.all(12),
+                padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.7),
                   borderRadius: BorderRadius.circular(12),
@@ -119,25 +152,25 @@ class AnimalCard extends StatelessWidget {
                       child: Text(
                         'Fun Facts:',
                         style: GoogleFonts.comfortaa(
-                          fontSize: 16,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                           color: Colors.pink.shade700,
                         ),
                       ),
                     ),
-                    const SizedBox(height: 8),
-                    ...item.facts.map((fact) => Padding(
-                      padding: const EdgeInsets.only(bottom: 4),
+                    const SizedBox(height: 4),
+                    ...widget.item.facts.map((fact) => Padding(
+                      padding: const EdgeInsets.only(bottom: 2),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Icon(Icons.star, size: 16, color: Colors.amber.shade700),
+                          Icon(Icons.star, size: 12, color: Colors.amber.shade700),
                           const SizedBox(width: 4),
                           Expanded(
                             child: Text(
                               fact,
                               style: GoogleFonts.comfortaa(
-                                fontSize: 12,
+                                fontSize: 11,
                                 color: Colors.pink.shade900,
                               ),
                             ),
@@ -149,16 +182,16 @@ class AnimalCard extends StatelessWidget {
                 ),
               ),
               // Tap indicator
-              const SizedBox(height: 8),
+              const SizedBox(height: 4),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.volume_up, color: Colors.pink.shade700),
+                  Icon(Icons.volume_up, size: 14, color: Colors.pink.shade700),
                   const SizedBox(width: 4),
                   Text(
-                    'Tap to hear animal sound',
+                    'Tap to hear sound',
                     style: GoogleFonts.comfortaa(
-                      fontSize: 14,
+                      fontSize: 12,
                       color: Colors.pink.shade700,
                     ),
                   ),

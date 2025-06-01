@@ -15,7 +15,7 @@ void main() {
 }
 
 class KidsLearningApp extends StatelessWidget {
-  const KidsLearningApp({Key? key}) : super(key: key);
+  const KidsLearningApp({super.key});
 
   @override
   Widget build(BuildContext context) {

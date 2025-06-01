@@ -2,16 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import '../models/number_item.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-class NumberCard extends StatelessWidget {
+class NumberCard extends StatefulWidget {
   final NumberItem item;
-  final AudioPlayer audioPlayer = AudioPlayer();
 
-  NumberCard({Key? key, required this.item}) : super(key: key);
+  const NumberCard({Key? key, required this.item}) : super(key: key);
+
+  @override
+  State<NumberCard> createState() => _NumberCardState();
+}
+
+class _NumberCardState extends State<NumberCard> {
+  AudioPlayer? audioPlayer;
+
+  @override
+  void dispose() {
+    audioPlayer?.dispose();
+    super.dispose();
+  }
 
   void _playSound() async {
     try {
-      await audioPlayer.play(AssetSource(item.sound.replaceFirst('assets/', '')));
+      // Release any existing player
+      await audioPlayer?.dispose();
+      
+      // Create a new instance for each playback
+      audioPlayer = AudioPlayer();
+      
+      // Remove 'assets/' prefix as AssetSource adds it automatically
+      final soundPath = widget.item.sound.replaceFirst('assets/', '');
+      
+      // Play the sound
+      await audioPlayer?.play(AssetSource(soundPath));
     } catch (e) {
       debugPrint('Error playing sound: $e');
     }
@@ -47,7 +70,7 @@ class NumberCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      item.number.toString(),
+                      widget.item.number.toString(),
                       style: GoogleFonts.comfortaa(
                         fontSize: 72,
                         fontWeight: FontWeight.bold,
@@ -56,7 +79,7 @@ class NumberCard extends StatelessWidget {
                     ),
                     const SizedBox(width: 16),
                     Text(
-                      item.word,
+                      widget.item.word,
                       style: GoogleFonts.comfortaa(
                         fontSize: 36,
                         fontWeight: FontWeight.bold,
@@ -75,13 +98,40 @@ class NumberCard extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  child: Image.asset(
-                    item.image,
-                    fit: BoxFit.contain,
-                    errorBuilder: (context, error, stackTrace) {
-                      return const Icon(Icons.image_not_supported, size: 64);
-                    },
-                  ),
+                  child: widget.item.image.endsWith('.svg')
+                      ? SvgPicture.asset(
+                          widget.item.image,
+                          fit: BoxFit.contain,
+                          placeholderBuilder: (context) => const Center(
+                            child: CircularProgressIndicator(),
+                          ),
+                          errorBuilder: (context, error, stackTrace) {
+                            debugPrint('Error loading SVG: $error');
+                            return Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  const Icon(Icons.error_outline, size: 48, color: Colors.red),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    'Error loading image',
+                                    style: GoogleFonts.comfortaa(
+                                      fontSize: 14,
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        )
+                      : Image.asset(
+                          widget.item.image,
+                          fit: BoxFit.contain,
+                          errorBuilder: (context, error, stackTrace) {
+                            return const Icon(Icons.image_not_supported, size: 64);
+                          },
+                        ),
                 ),
               ),
               const SizedBox(height: 16),
@@ -103,7 +153,7 @@ class NumberCard extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    ...item.examples.map((example) => Padding(
+                    ...widget.item.examples.map((example) => Padding(
                           padding: const EdgeInsets.only(bottom: 4),
                           child: Text(
                             '• $example',

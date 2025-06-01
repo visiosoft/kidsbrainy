@@ -4,9 +4,9 @@ final List<CountryItem> countryData = [
   CountryItem(
     name: 'United States',
     capital: 'Washington D.C.',
-    flag: 'assets/images/country_usa_flag.png',
-    map: 'assets/images/country_usa_map.png',
-    sound: 'assets/sounds/country_usa.mp3',
+    flag: 'assets/images/countries/america.svg',
+    map: 'assets/images/countries/america-map.svg',
+    sound: 'assets/audios/countries/usa.mp3',
     continent: 'North America',
     facts: [
       'Home to the world\'s largest economy',
@@ -18,9 +18,9 @@ final List<CountryItem> countryData = [
   CountryItem(
     name: 'Japan',
     capital: 'Tokyo',
-    flag: 'assets/images/country_japan_flag.png',
-    map: 'assets/images/country_japan_map.png',
-    sound: 'assets/sounds/country_japan.mp3',
+    flag: 'assets/images/countries/japan.svg',
+    map: 'assets/images/countries/japan-map.svg',
+    sound: 'assets/audios/countries/japan.mp3',
     continent: 'Asia',
     facts: [
       'Known as the Land of the Rising Sun',
@@ -32,9 +32,9 @@ final List<CountryItem> countryData = [
   CountryItem(
     name: 'Egypt',
     capital: 'Cairo',
-    flag: 'assets/images/country_egypt_flag.png',
-    map: 'assets/images/country_egypt_map.png',
-    sound: 'assets/sounds/country_egypt.mp3',
+    flag: 'assets/images/countries/egypt.svg',
+    map: 'assets/images/countries/egypt-map.svg',
+    sound: 'assets/audios/countries/egypt.mp3',
     continent: 'Africa',
     facts: [
       'Home to the Great Pyramids of Giza',
@@ -44,25 +44,25 @@ final List<CountryItem> countryData = [
     ],
   ),
   CountryItem(
-    name: 'Australia',
-    capital: 'Canberra',
-    flag: 'assets/images/country_australia_flag.png',
-    map: 'assets/images/country_australia_map.png',
-    sound: 'assets/sounds/country_australia.mp3',
-    continent: 'Oceania',
+    name: 'Pakistan',
+    capital: 'Islamabad',
+    flag: 'assets/images/countries/pakistan.svg',
+    map: 'assets/images/countries/pakistan-map.svg',
+    sound: 'assets/audios/countries/pakistan.mp3',
+    continent: 'Asia',
     facts: [
-      'The only country that is also a continent',
-      'Home to the Great Barrier Reef',
-      'Has more kangaroos than people',
-      'The Sydney Opera House is a famous landmark',
+      'Home to K2, the second highest mountain in the world',
+      'Has the world\'s largest irrigation system',
+      'The ancient city of Mohenjo-daro is one of the world\'s earliest urban settlements',
+      'Known for its rich cultural heritage and diverse landscapes',
     ],
   ),
   CountryItem(
     name: 'Brazil',
     capital: 'Brasília',
-    flag: 'assets/images/country_brazil_flag.png',
-    map: 'assets/images/country_brazil_map.png',
-    sound: 'assets/sounds/country_brazil.mp3',
+    flag: 'assets/images/countries/brazil.svg',
+    map: 'assets/images/countries/brazil-map.svg',
+    sound: 'assets/audios/countries/brazil.mp3',
     continent: 'South America',
     facts: [
       'Home to the Amazon Rainforest',
@@ -74,9 +74,9 @@ final List<CountryItem> countryData = [
   CountryItem(
     name: 'France',
     capital: 'Paris',
-    flag: 'assets/images/country_france_flag.png',
-    map: 'assets/images/country_france_map.png',
-    sound: 'assets/sounds/country_france.mp3',
+    flag: 'assets/images/countries/france.svg',
+    map: 'assets/images/countries/france-map.svg',
+    sound: 'assets/audios/countries/france.mp3',
     continent: 'Europe',
     facts: [
       'Home to the Eiffel Tower',
@@ -88,9 +88,9 @@ final List<CountryItem> countryData = [
   CountryItem(
     name: 'India',
     capital: 'New Delhi',
-    flag: 'assets/images/country_india_flag.png',
-    map: 'assets/images/country_india_map.png',
-    sound: 'assets/sounds/country_india.mp3',
+    flag: 'assets/images/countries/india.svg',
+    map: 'assets/images/countries/india-map.svg',
+    sound: 'assets/audios/countries/india.mp3',
     continent: 'Asia',
     facts: [
       'The world\'s largest democracy',
@@ -102,9 +102,9 @@ final List<CountryItem> countryData = [
   CountryItem(
     name: 'Canada',
     capital: 'Ottawa',
-    flag: 'assets/images/country_canada_flag.png',
-    map: 'assets/images/country_canada_map.png',
-    sound: 'assets/sounds/country_canada.mp3',
+    flag: 'assets/images/countries/canada.svg',
+    map: 'assets/images/countries/canada-map.svg',
+    sound: 'assets/audios/countries/canada.mp3',
     continent: 'North America',
     facts: [
       'Has the world\'s longest coastline',
@@ -116,9 +116,9 @@ final List<CountryItem> countryData = [
   CountryItem(
     name: 'South Africa',
     capital: 'Pretoria',
-    flag: 'assets/images/country_southafrica_flag.png',
-    map: 'assets/images/country_southafrica_map.png',
-    sound: 'assets/sounds/country_southafrica.mp3',
+    flag: 'assets/images/countries/south-africa.svg',
+    map: 'assets/images/countries/south-africa-map.svg',
+    sound: 'assets/audios/countries/africa.mp3',
     continent: 'Africa',
     facts: [
       'Has three capital cities',
@@ -130,9 +130,9 @@ final List<CountryItem> countryData = [
   CountryItem(
     name: 'China',
     capital: 'Beijing',
-    flag: 'assets/images/country_china_flag.png',
-    map: 'assets/images/country_china_map.png',
-    sound: 'assets/sounds/country_china.mp3',
+    flag: 'assets/images/countries/china.svg',
+    map: 'assets/images/countries/china-map.svg',
+    sound: 'assets/audios/countries/china.mp3',
     continent: 'Asia',
     facts: [
       'Home to the Great Wall of China',
